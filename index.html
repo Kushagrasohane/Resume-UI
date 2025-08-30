@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kushagra Sohane - Resume</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #eef2f7;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0073e6, #00c6ff);
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    /* Layout */
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 20px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #f1f7ff;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #d6e4ff;
+    }
+
+    .sidebar h2 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: #0073e6;
+      border-bottom: 2px solid #0073e6;
+      padding-bottom: 5px;
+    }
+
+    .sidebar p, .sidebar a {
+      font-size: 1rem;
+      margin: 8px 0;
+      color: #333;
+      text-decoration: none;
+      display: block;
+    }
+
+    .sidebar a {
+      color: #0073e6;
+      font-weight: 500;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Content */
+    .content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    .box {
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 18px;
+      background: #fafafa;
+      transition: all 0.3s ease;
+    }
+
+    .box:hover {
+      background: #f1f7ff;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #0073e6;
+    }
+
+    .box p, .box li {
+      font-size: 1rem;
+      color: #444;
+      margin: 4px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Kushagra Sohane</h1>
+      <p>Computer Science Student | Aspiring Software Developer</p>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>Contact</h2>
+        <p>📍 Maudaha, Hamirpur, UP</p>
+        <p>📞 +91-6307750318</p>
+        <p>📧 <a href="mailto:31765cs@gmail.com">31765cs@gmail.com</a></p>
+        <p>🔗 <a href="https://linkedin.com/in/kushagra-sohane" target="_blank">LinkedIn</a></p>
+        <p>💻 <a href="https://github.com/Kushagrasohane" target="_blank">GitHub</a></p>
+        <p>🧩 <a href="https://leetcode.com/u/Kushagrasohane" target="_blank">LeetCode</a></p>
+        <p>📚 <a href="https://www.geeksforgeeks.org/user/saurabhsohane" target="_blank">GeeksforGeeks</a></p>
+      </aside>
+
+      <!-- Right Content -->
+      <section class="content">
+        <div class="box">
+          <h3>Address</h3>
+          <p>Maudaha, Hamirpur, Uttar Pradesh</p>
+        </div>
+
+        <div class="box">
+          <h3>Education</h3>
+          <p><b>B.Tech in Computer Science & Engineering</b></p>
+          <p>Pranveer Singh Institute of Technology, Kanpur</p>
+          <p>Nov 2021 – May 2025 | CGPA: 7.3</p>
+        </div>
+
+        <div class="box">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>Languages: Python, Java, C++, JavaScript, C, SQL</li>
+            <li>Web Dev: HTML5, CSS3, React.js, Node.js, REST APIs</li>
+            <li>Databases/Cloud: MongoDB, SQLite, Firebase, AWS, Azure</li>
+            <li>Frameworks: Flask, OpenCV, Scikit-learn</li>
+            <li>Tools: Git, Docker, Linux, Jupyter, VS Code</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Organizations</h3>
+          <p><b>OASIS Infobyte</b> | Web Development Intern</p>
+          <p>Jun 2024 – Aug 2024 | Remote</p>
+          <ul>
+            <li>Developed responsive ReactJS portfolio and landing page (35% faster load).</li>
+            <li>Collaborated in Agile team of 3 developers.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Projects</h3>
+          <p><b>Face Recognition Attendance System</b></p>
+          <p>Jan 2024 – Apr 2024 | Python, OpenCV, Flask, SQLite</p>
+          <ul>
+            <li>95%+ accuracy for 100+ students.</li>
+            <li>Secure Flask dashboard with duplicate-prevention logic.</li>
+          </ul>
+          <p><b>Video Streaming Platform</b></p>
+          <p>Apr 2023 – Jun 2023 | Python, Docker, Nginx, FFmpeg</p>
+          <ul>
+            <li>Scaled to 10,000+ users with adaptive streaming.</li>
+            <li>FFmpeg transcoding + Docker for service isolation.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Achievements</h3>
+          <ul>
+            <li>1300+ LeetCode, 400+ GFG problems solved.</li>
+            <li>AIR 2988 – Naukri Campus Young Turks.</li>
+            <li>Certifications: Google Cybersecurity, HackerRank SQL, Infosys OOP Python.</li>
+            <li>Qualified Flipkart Grid 6.0 Robotics Round.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
