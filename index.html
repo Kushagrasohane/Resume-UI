@@ -8,40 +8,46 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       background: #eef2f7;
       line-height: 1.5;
       color: #333;
+
+      /* ✅ use flex instead of margin */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .container {
       width: 90%;
-      margin: 20px auto;
+      max-width: 1100px;
       background: #fff;
-      padding: 20px;
-      border-radius: 12px;
+      padding: 1.5rem; /* ✅ use rem instead of px */
+      border-radius: 0.75rem;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     }
 
     /* Header */
     header {
       text-align: center;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0.75rem;
       background: linear-gradient(135deg, #0073e6, #00c6ff);
       color: white;
     }
 
     header h1 {
-      font-size: 2.4rem;
-      margin: 0;
-      font-weight: bold;
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem;
+      font-weight: bold; /* ✅ fix h1 */
     }
 
     header p {
-      margin: 5px 0 0;
-      font-size: 1.2rem;
+      margin: 0;
+      font-size: 1.2rem; /* ✅ fix p */
+      line-height: 1.6;
       font-weight: 400;
     }
 
@@ -49,31 +55,35 @@
     .main {
       display: grid;
       grid-template-columns: 1fr 3fr;
-      grid-gap: 20px;
+      gap: 1.5rem;
     }
 
     /* Sidebar */
     .sidebar {
       background: #f1f7ff;
-      padding: 20px;
-      border-radius: 12px;
+      padding: 1.2rem;
+      border-radius: 0.75rem;
       border: 1px solid #d6e4ff;
     }
 
     .sidebar h2 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
+      font-size: 1.3rem; /* ✅ fix header */
+      margin-bottom: 1rem;
       color: #0073e6;
       border-bottom: 2px solid #0073e6;
-      padding-bottom: 5px;
+      padding-bottom: 0.4rem;
     }
 
     .sidebar p, .sidebar a {
       font-size: 1rem;
-      margin: 8px 0;
+      margin: 0.6rem 0;
       color: #333;
       text-decoration: none;
-      display: block;
+
+      /* ✅ Align icons and hyperlinks */
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .sidebar a {
@@ -89,13 +99,14 @@
     .content {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 2rem;
+      gap: 1.5rem;
     }
 
     .box {
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      padding: 18px;
+      /* ✅ remove border box */
+      border: none;
+      border-radius: 0.75rem;
+      padding: 1.2rem;
       background: #fafafa;
       transition: all 0.3s ease;
     }
@@ -108,7 +119,7 @@
 
     .box h3 {
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 0.8rem;
       font-size: 1.3rem;
       font-weight: bold;
       color: #0073e6;
@@ -117,11 +128,21 @@
     .box p, .box li {
       font-size: 1rem;
       color: #444;
-      margin: 4px 0;
+      margin: 0.4rem 0;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 1.2rem; /* ✅ no margin-bottom in li */
+    }
+
+    /* ✅ Mobile responsiveness */
+    @media (max-width: 768px) {
+      .main {
+        grid-template-columns: 1fr;
+      }
+      .content {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -150,15 +171,13 @@
       <!-- Right Content -->
       <section class="content">
         <div class="box">
-          <h3>Address</h3>
-          <p>Maudaha, Hamirpur, Uttar Pradesh</p>
-        </div>
-
-        <div class="box">
           <h3>Education</h3>
           <p><b>B.Tech in Computer Science & Engineering</b></p>
           <p>Pranveer Singh Institute of Technology, Kanpur</p>
           <p>Nov 2021 – May 2025 | CGPA: 7.3</p>
+          <!-- ✅ schooling details -->
+          <p><b>Intermediate (PCM)</b> | CBSE Board | 2020</p>
+          <p><b>High School</b> | CBSE Board | 2018</p>
         </div>
 
         <div class="box">
@@ -173,24 +192,18 @@
         </div>
 
         <div class="box">
-          <h3>Organizations</h3>
-          <p><b>OASIS Infobyte</b> | Web Development Intern</p>
-          <p>Jun 2024 – Aug 2024 | Remote</p>
-          <ul>
-            <li>Developed responsive ReactJS portfolio and landing page (35% faster load).</li>
-            <li>Collaborated in Agile team of 3 developers.</li>
-          </ul>
-        </div>
-
-        <div class="box">
           <h3>Projects</h3>
-          <p><b>Face Recognition Attendance System</b></p>
+          <p><b>Face Recognition Attendance System</b> 
+            (<a href="https://github.com/Kushagrasohane/face-attendance" target="_blank">GitHub</a>)
+          </p>
           <p>Jan 2024 – Apr 2024 | Python, OpenCV, Flask, SQLite</p>
           <ul>
             <li>95%+ accuracy for 100+ students.</li>
             <li>Secure Flask dashboard with duplicate-prevention logic.</li>
           </ul>
-          <p><b>Video Streaming Platform</b></p>
+          <p><b>Video Streaming Platform</b> 
+            (<a href="https://github.com/Kushagrasohane/video-streaming" target="_blank">GitHub</a>)
+          </p>
           <p>Apr 2023 – Jun 2023 | Python, Docker, Nginx, FFmpeg</p>
           <ul>
             <li>Scaled to 10,000+ users with adaptive streaming.</li>
@@ -205,6 +218,16 @@
             <li>AIR 2988 – Naukri Campus Young Turks.</li>
             <li>Certifications: Google Cybersecurity, HackerRank SQL, Infosys OOP Python.</li>
             <li>Qualified Flipkart Grid 6.0 Robotics Round.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Organizations</h3>
+          <p><b>OASIS Infobyte</b> | Web Development Intern</p>
+          <p>Jun 2024 – Aug 2024 | Remote</p>
+          <ul>
+            <li>Developed responsive ReactJS portfolio and landing page (35% faster load).</li>
+            <li>Collaborated in Agile team of 3 developers.</li>
           </ul>
         </div>
       </section>
